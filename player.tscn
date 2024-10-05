@@ -8,19 +8,20 @@ size = Vector2(46.7902, 52.8556)
 
 [node name="Player" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-68.9536, -32.2818)
+scale = Vector2(1.15409, 1.15409)
+script = ExtResource("2_csf4i")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(539.25, 301.25)
-scale = Vector2(3.82292, 3.82292)
+position = Vector2(526.998, 289)
+scale = Vector2(3.3125, 3.3125)
 texture = ExtResource("1_3pat7")
 hframes = 4
 vframes = 4
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
-position = Vector2(-159.094, -87.2453)
-scale = Vector2(0.301887, 0.301887)
-script = ExtResource("2_csf4i")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(526.783, 289.217)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xhy2i")

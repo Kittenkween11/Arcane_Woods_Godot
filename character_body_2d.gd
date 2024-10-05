@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var direction: Vector2 = Vector2.ZERO
-@export var speed: int = 50
+@export var speed: int = 175
 
 func _process(delta):
 	direction = Input.get_vector("left", "right", "up", "down")
