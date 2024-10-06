@@ -175,9 +175,10 @@ position = Vector2(526.998, 289)
 scale = Vector2(3.3125, 3.3125)
 sprite_frames = SubResource("SpriteFrames_44055")
 animation = &"Idle_down"
-frame_progress = 0.798023
+frame_progress = 0.418313
 script = ExtResource("3_lntuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
 position = Vector2(526.783, 289.217)
 shape = SubResource("RectangleShape2D_xhy2i")
