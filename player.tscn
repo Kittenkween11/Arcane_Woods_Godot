@@ -1,73 +1,48 @@
 [gd_scene load_steps=8 format=3 uid="uid://bv5h30hox4mdh"]
 
-[ext_resource type="Script" path="res://animation_player.gd" id="1_0tib3"]
 [ext_resource type="Texture2D" uid="uid://1ksv57nvlyla" path="res://Basic Charakter Spritesheet.png" id="1_3pat7"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="2_csf4i"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="3_lntuw"]
 
-[sub_resource type="Animation" id="Animation_klw2c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../CharacterBody2D/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_iog0r"]
+atlas = ExtResource("1_3pat7")
+region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="Animation" id="Animation_mv2s1"]
-resource_name = "Idle"
-length = 1.2
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../CharacterBody2D/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 0, 1]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xa5r"]
+atlas = ExtResource("1_3pat7")
+region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_q53o0"]
-_data = {
-"Idle": SubResource("Animation_mv2s1"),
-"RESET": SubResource("Animation_klw2c")
-}
+[sub_resource type="SpriteFrames" id="SpriteFrames_44055"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iog0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xa5r")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhy2i"]
 size = Vector2(46.7902, 52.8556)
 
 [node name="Player" type="Node2D"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../CharacterBody2D")
-libraries = {
-"": SubResource("AnimationLibrary_q53o0")
-}
-speed_scale = 0.75
-script = ExtResource("1_0tib3")
-
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(-68.9536, -32.2818)
 scale = Vector2(1.15409, 1.15409)
 script = ExtResource("2_csf4i")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(526.998, 289)
 scale = Vector2(3.3125, 3.3125)
-texture = ExtResource("1_3pat7")
-hframes = 4
-vframes = 4
+sprite_frames = SubResource("SpriteFrames_44055")
+animation = &"Idle"
+script = ExtResource("3_lntuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(526.783, 289.217)
