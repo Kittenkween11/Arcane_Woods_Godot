@@ -1,8 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://bv5h30hox4mdh"]
+[gd_scene load_steps=21 format=3 uid="uid://bv5h30hox4mdh"]
 
-[ext_resource type="Texture2D" uid="uid://1ksv57nvlyla" path="res://Basic Charakter Spritesheet.png" id="1_3pat7"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="2_csf4i"]
-[ext_resource type="Script" path="res://sprite_2d.gd" id="3_lntuw"]
+[ext_resource type="Texture2D" uid="uid://1ksv57nvlyla" path="res://Art/Basic Charakter Spritesheet.png" id="1_3pat7"]
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_csf4i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iog0r"]
 atlas = ExtResource("1_3pat7")
@@ -175,8 +174,6 @@ position = Vector2(526.998, 289)
 scale = Vector2(3.3125, 3.3125)
 sprite_frames = SubResource("SpriteFrames_44055")
 animation = &"Idle_down"
-frame_progress = 0.418313
-script = ExtResource("3_lntuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 visible = false
