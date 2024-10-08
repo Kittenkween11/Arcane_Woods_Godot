@@ -167,7 +167,6 @@ size = Vector2(46.7902, 52.8556)
 position = Vector2(-68.9536, -32.2818)
 scale = Vector2(1.15409, 1.15409)
 script = ExtResource("2_csf4i")
-speed = null
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
