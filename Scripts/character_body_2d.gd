@@ -9,14 +9,17 @@ func handleInput():
 	velocity = direction*speed
 	
 func updateAnimation():
-	var direction = "Down"
-	if velocity.x < 0: direction = "Left"
-	elif velocity.x > 0: direction = "Right"
-	elif velocity.y <0: direction = "Up"
+	if velocity.length() == 0:
+		animations.stop()
+	else:
+		var direction = "down"
+		if velocity.x < 0: direction = "left"
+		elif velocity.x > 0: direction = "right"
+		elif velocity.y < 0: direction = "up"
 	
-	animations.play("walk" + direction)
+		animations.play("walk_" + direction)
 	
 func _physics_process(delta):
 	handleInput()
 	move_and_slide()
-	updateAnimation
+	updateAnimation()
