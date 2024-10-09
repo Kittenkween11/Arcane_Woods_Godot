@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var direction: Vector2 = Vector2.ZERO
 @export var speed: int = 215
-@onready var animations = $AnimationsPlayer
+@onready var animations = $AnimationPlayer
 
 func handleInput():
 	direction = Input.get_vector("left", "right", "up", "down")
@@ -21,5 +21,5 @@ func updateAnimation():
 	
 func _physics_process(delta):
 	handleInput()
-	move_and_slide()
 	updateAnimation()
+	move_and_slide()
