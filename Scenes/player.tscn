@@ -1,7 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bv5h30hox4mdh"]
+[gd_scene load_steps=15 format=3 uid="uid://bv5h30hox4mdh"]
 
-[ext_resource type="Texture2D" uid="uid://cp8vs3r7441pp" path="res://Art/Characters/Body/char2.png" id="2_amcai"]
+[ext_resource type="Texture2D" uid="uid://x7g3p85whmcm" path="res://Art/Characters/Body/char1.png" id="2_c8u5l"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_csf4i"]
+[ext_resource type="Texture2D" uid="uid://ddpju81r0oosv" path="res://Art/Characters/Hair/bob .png" id="3_7jm5f"]
+[ext_resource type="Texture2D" uid="uid://bmodpcr1ri73q" path="res://Art/Characters/Clothes/basic.png" id="3_n37g7"]
+[ext_resource type="Texture2D" uid="uid://bfde73y6cjhiu" path="res://Art/Characters/Clothes/pants.png" id="5_0cnkt"]
+[ext_resource type="Texture2D" uid="uid://bwx1isjc1457s" path="res://Art/Characters/Clothes/shoes.png" id="6_vcgdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhy2i"]
 size = Vector2(46.7902, 52.8556)
@@ -11,7 +15,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/path = NodePath("Base:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -33,7 +37,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/path = NodePath("Base:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -50,7 +54,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/path = NodePath("Base:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -67,7 +71,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/path = NodePath("Base:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -84,7 +88,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/path = NodePath("Base:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -111,12 +115,44 @@ position = Vector2(-68.9536, -32.2818)
 scale = Vector2(1.15409, 1.15409)
 script = ExtResource("2_csf4i")
 
-[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Base" type="Sprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(548.444, 308.712)
 scale = Vector2(3.3125, 3.3125)
-texture = ExtResource("2_amcai")
+texture = ExtResource("2_c8u5l")
 hframes = 8
+vframes = 48
+
+[node name="Hair" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(548.444, 308.712)
+scale = Vector2(3.3125, 3.3125)
+texture = ExtResource("3_7jm5f")
+hframes = 112
+vframes = 48
+
+[node name="Clothes" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(548.444, 308.712)
+scale = Vector2(3.3125, 3.3125)
+texture = ExtResource("3_n37g7")
+hframes = 80
+vframes = 48
+
+[node name="Pants" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(548.444, 308.712)
+scale = Vector2(3.3125, 3.3125)
+texture = ExtResource("5_0cnkt")
+hframes = 80
+vframes = 48
+
+[node name="Shoes" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(548.444, 308.712)
+scale = Vector2(3.3125, 3.3125)
+texture = ExtResource("6_vcgdx")
+hframes = 80
 vframes = 48
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
