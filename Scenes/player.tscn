@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://x7g3p85whmcm" path="res://Art/Characters/Body/char1.png" id="2_c8u5l"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_csf4i"]
-[ext_resource type="Texture2D" uid="uid://ddpju81r0oosv" path="res://Art/Characters/Hair/bob .png" id="3_7jm5f"]
+[ext_resource type="Texture2D" uid="uid://ddpju81r0oosv" path="res://Art/Characters/Hair/bob.png" id="3_7jm5f"]
 [ext_resource type="Texture2D" uid="uid://bmodpcr1ri73q" path="res://Art/Characters/Clothes/basic.png" id="3_n37g7"]
 [ext_resource type="Texture2D" uid="uid://bfde73y6cjhiu" path="res://Art/Characters/Clothes/pants.png" id="5_0cnkt"]
 [ext_resource type="Texture2D" uid="uid://bwx1isjc1457s" path="res://Art/Characters/Clothes/shoes.png" id="6_vcgdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhy2i"]
-size = Vector2(46.7902, 52.8556)
+size = Vector2(45.9237, 66.7192)
 
 [sub_resource type="Animation" id="Animation_rg3lk"]
 length = 0.001
@@ -157,7 +157,7 @@ vframes = 48
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 visible = false
-position = Vector2(526.783, 289.217)
+position = Vector2(548.011, 327.342)
 shape = SubResource("RectangleShape2D_xhy2i")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]

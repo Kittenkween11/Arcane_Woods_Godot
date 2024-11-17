@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1ksv57nvlyla"
-path="res://.godot/imported/Basic Charakter Spritesheet.png-e20f7586cf892eb778d4d12cfc88e979.ctex"
+uid="uid://ddpju81r0oosv"
+path="res://.godot/imported/bob.png-4750a99b2eddb86f21176195f09810dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Basic Charakter Spritesheet.png"
-dest_files=["res://.godot/imported/Basic Charakter Spritesheet.png-e20f7586cf892eb778d4d12cfc88e979.ctex"]
+source_file="res://Art/Characters/Hair/bob.png"
+dest_files=["res://.godot/imported/bob.png-4750a99b2eddb86f21176195f09810dd.ctex"]
 
 [params]
 
